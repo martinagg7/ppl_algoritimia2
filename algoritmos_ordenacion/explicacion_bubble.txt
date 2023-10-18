@@ -1,0 +1,39 @@
+for i in range(4):
+    for j in range():
+        print(i,j)
+0 0
+0 1
+0 2
+1 0
+1 1
+1 2
+2 0
+2 1
+2 2
+3 0
+3 1
+3 2
+for i in range(3):
+    for j in range(4):
+        print(i,j)
+0 0
+0 1
+0 2
+0 3
+1 0
+1 1
+1 2
+1 3
+2 0
+2 1
+2 2
+2 3
+
+for i in range(4):
+    for j in range(1):
+        print(i,j)
+
+0 0
+1 0
+2 0
+3 0
