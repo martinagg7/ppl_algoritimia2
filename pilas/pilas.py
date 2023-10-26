@@ -1,70 +1,64 @@
-
-
-class Stack:#Pila 
-
-    class Node:#Nodo
-        def __init__(self,value):
-            self.value=value
-            self.next_node=None
-
+class Pila:
+    class Nodo:
+        def __init__(self, value):
+            self.value = value
+            self.next_node = None
 
     def __init__(self):
-        self.top=None
-        self.size=0
+        self.cima = None
+        self.tamanio = 0
 
-    def create_node(self,value):
-        return self.Node(value)
-    
-    def push(self,value):#apilar
-        node=self.create_node(value)    
-        node.next_node=self.top
-        self.top=node       
-        self.size+=1
+    def create_node(self, value):
+        return self.Nodo(value)
 
-    def pop(self):#desapilar
+    def apilar(self, value):
+        node = self.create_node(value)
+        node.next_node = self.cima
+        self.cima = node
+        self.tamanio += 1
+
+    def desapilar(self):
         value = None
-        if self.size>0:
-            value=self.top.value
-            self.top=self.top.next_node
-            self.size-=1
+        if self.cima is not None:
+            value = self.cima.value
+            self.cima = self.cima.next_node
+            self.tamanio -= 1
         return value
-    
-    def delete(self):
-        self.top=None
-        self.size=0
-        if self.top and self.size==0:
-             return "stack is empty"
-        
+
+    def pila_vacia(self):
+        "Devuelve true si la pila vacia"
+        return self.cima is None
+
     def size(self):
-        return self.size
-    
-    def peek(self):
-        if self.top is not None:
-            return self.top.value
+        return self.tamanio
+
+    def top(self):
+        if self.cima is not None:
+            return self.cima.value
         else:
             return None
-        
-    def list(self):
-        values=[]
-        pointer=self.top
-        while pointer!=None:
+
+    def lista(self):
+        values = []
+        pointer = self.cima
+        while pointer is not None:
             values.append(pointer.value)
-            pointer=pointer.next_node
+            pointer = pointer.next_node
         return values
 
-  
-   
-if __name__ == "__main__":
-    stack = Stack()
-    print("stack created")
-    print("pushing=5")
-    stack.push(5)
-    print("listing="+str(stack.list())) # [8, 3, 5]
-    print("pushing=3")
-    stack.push(3)
-    print("listing="+str(stack.list())) # [8, 3, 5]
-    print("pushing=8")
-    stack.push(8)
-    print("listing="+str(stack.list())) # [8, 3, 5]
-    print("poping="+str(stack.pop()))
-    print("listing="+str(stack.list())) # [8, 3, 5] 
+
+def barrido(pila):
+    paux=Pila()
+    while pila.pila_vacia() is not True:
+        dato=pila.desapilar()
+        print(dato)
+        paux.apilar(dato)
+
+    while paux.pila_vacia() is not True:
+        paux.desapilar(dato)
+        pila.apilar(dato)
+
+mi_pila=Pila()
+mi_pila.apilar(4)
+mi_pila.apilar(2)
+print(lista(mi_pila))
