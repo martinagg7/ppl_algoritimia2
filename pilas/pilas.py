@@ -38,7 +38,7 @@ class Pila:
         else:
             return None
 
-    def lista(self):
+    def lista_pila(self):
         values = []
         pointer = self.cima
         while pointer is not None:
@@ -61,5 +61,5 @@ def barrido(pila):
 mi_pila=Pila()
 mi_pila.apilar(4)
 mi_pila.apilar(2)
-print(lista(mi_pila))
+
 
