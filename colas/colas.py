@@ -9,6 +9,7 @@ class Cola:
         self.frente=None
         self.final=None
         self.tamanio=0
+        
     def anadir_final(self,value):
         nodo=self.Nodo(value)
         if self.tamanio==0:

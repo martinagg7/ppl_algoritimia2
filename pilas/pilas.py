@@ -6,8 +6,7 @@ class Stack:#Pila
         def __init__(self,value):
             self.value=value
             self.next_node=None
-    def setNextNode(self,next_node):
-            self.next_node=next_node
+
 
     def __init__(self):
         self.top=None
@@ -25,7 +24,7 @@ class Stack:#Pila
     def pop(self):#desapilar
         value = None
         if self.size>0:
-            value=self.top.value#no lo etiendo
+            value=self.top.value
             self.top=self.top.next_node
             self.size-=1
         return value
@@ -53,6 +52,8 @@ class Stack:#Pila
             pointer=pointer.next_node
         return values
 
+  
+   
 if __name__ == "__main__":
     stack = Stack()
     print("stack created")
