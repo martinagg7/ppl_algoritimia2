@@ -10,7 +10,7 @@ class Cola:
         self.final=None
         self.tamanio=0
         
-    def anadir_final(self,value):
+    def arribo(self,value):#añadir al final cola
         nodo=self.Nodo(value)
         if self.tamanio==0:
             self.frente=nodo
@@ -18,7 +18,8 @@ class Cola:
             self.final.siguiente=nodo
         self.final=nodo
         self.tamanio+=1
-    def eliminar_frente(self):
+
+    def atencion(self):
         if self.tamanio==0:
             return None
         else:
@@ -26,18 +27,33 @@ class Cola:
             self.frente=self.frente.siguiente
             self.tamanio-=1
             return valor
-    def vacia(self):
+    def cola_vacia(self):
+        "Devulve true si esta vacia"
+        return self.frente is None
+    
+    def en_frente(self):
+        return self.frente.valor
+    
+    def tamanio(self):
+        return self.tamanio
+    
+    def mover_al_final(self):
         if self.tamanio==0:
-            return True
+            return None
         else:
-            return False
-    def list(self):
+            "Mueve un elemento del inicio de la cola al final"
+        dato=self.atencion()
+        self.arribo(dato)
+        return dato
+    
+    def lista_cola(self):
         lista=[]
         puntero=self.frente
         while puntero is not None:
             lista.append(puntero.valor)
             puntero=puntero.siguiente
         return lista
+
 
 
 
