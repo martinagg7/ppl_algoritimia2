@@ -19,7 +19,7 @@ class Cola:
         self.final=nodo
         self.tamanio+=1
 
-    def atencion(self):
+    def atencion(self):#elimina el primer elemento 
         if self.tamanio==0:
             return None
         else:
