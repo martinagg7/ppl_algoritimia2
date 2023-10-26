@@ -47,19 +47,5 @@ class Pila:
         return values
 
 
-def barrido(pila):
-    paux=Pila()
-    while pila.pila_vacia() is not True:
-        dato=pila.desapilar()
-        print(dato)
-        paux.apilar(dato)
-
-    while paux.pila_vacia() is not True:
-        paux.desapilar(dato)
-        pila.apilar(dato)
-
-mi_pila=Pila()
-mi_pila.apilar(4)
-mi_pila.apilar(2)
 
 
