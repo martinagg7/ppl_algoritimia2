@@ -61,4 +61,4 @@ def barrido(pila):
 mi_pila=Pila()
 mi_pila.apilar(4)
 mi_pila.apilar(2)
-print(lista(mi_pila))
+
