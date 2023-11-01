@@ -1,0 +1,22 @@
+"Clase polinomio"
+
+class Nodo:
+    def __init__(self, valor, termino):
+        self.valor = valor
+        self.termino = termino
+        self.sig = None
+
+class Polinomio:
+    def __init__(self):
+        self.cima = None
+    
+ 
+
+    def apilar(self, valor, termino):
+        nuevo_nodo = Nodo(valor, termino)
+        nuevo_nodo.sig = self.cima
+        self.cima = nuevo_nodo
+        self.terminos += 1
+
+1-ES SUPER IMPORTANTE QUE SIEMPRE QUE QUERAMOS CREAR UN NODO TENEMOS QUE PASARLE LOS DOS VALORES
+NODO(VALOR,TERMINO)
