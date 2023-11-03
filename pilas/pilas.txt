@@ -1,0 +1,17 @@
+        a=7
+        b=9
+        c=19
+        d=79
+        true or xxxx  = 
+
+        false or True
+        false or False 
+        if a<b or c==d:
+
+        a = None  ==False
+
+        if anterior is None (es true ya no miro el or) or XXXX: 
+        if anterior is None (es false ya no miro el and) and XXXX: 
+        if anterior is not None () and XXXX: 
+            cuando estamos en la cima  = false and (anterior.terminio)
+            cuando estamos en medio de la pila  = true
